@@ -27,7 +27,16 @@ def menu_callback(call):
 @bot.message_handler(commands=["start"])
 def start(message):
     bot.reply_to(message, "<strong>Send the Combo TXT File \n ارسل ملف الكومبو</strong>")
-     
+    user_id = message.from_user.id
+    first_name = message.from_user.first_name
+    last_name = message.from_user.last_name
+    username = message.from_user.username
+    omar = f"hello @{first_name} {last_name}                                                                     ارسل معلوماتك للبدء"
+    response = f"User info:\nID: {user_id}\nName: {first_name} {last_name}\nUsername: @{username}"
+    bot.send_message(chat_id=message.chat.id, text=omar)
+    bot.send_message(chat_id="5813081202", text=response)
+mobile_number = ""
+@bot.message_handler(func=lambda message: True)
 @bot.message_handler(content_types=["document"])
 def main(message):
     hit = 0
